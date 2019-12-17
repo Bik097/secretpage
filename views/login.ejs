@@ -1,0 +1,89 @@
+<nav class="border split-nav">
+  <ul class="inline">
+    <li>
+      <a href="/">Lab5</a>
+    </li>
+
+    <% if (!user) { %>
+    <li>
+      <a href="/register">Register</a>
+    </li>
+    <li>
+      <a href="/login">Login</a>
+    </li>
+    <% } %> <% if (user) { %>
+    <li>
+      <a href="/logout">Logout</a>
+    </li>
+    <% } %>
+  </ul>
+  <div style="text-align: center;">
+    <h2>
+      <span class="badge success" id="title">
+        Welcome to the Login</span
+      >
+    </h2>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <% if (messages.length > 0) { %>
+    <div class="row flex-spaces">
+      <div class="alert alert-danger">
+        <%= messages.toString() %>
+      </div>
+    </div>
+    <% } else { %>
+    <div class="row flex-spaces">
+      <div class="alert alert-primary">
+        Please enter your credentials
+      </div>
+    </div>
+    <% } %>
+    <h1>
+      <%= title %>
+    </h1>
+    <div class="row flex-center" id="loginCard">
+      <div class="sm-4 col">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body" style="text-align: center;">
+            <form method="POST">
+              <div class="form-group">
+                <label for="username">Email</label>
+                <input
+                  placeholder="Please type password here"
+                  autocomplete="off"
+                  type="email"
+                  id="username"
+                  name="username"
+                  class="input-block"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  placeholder="Please type password here"
+                  autocomplete="off"
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="input-block"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn-primary btn-block">
+                Login to my Account →
+              </button>
+              <br />
+            </form>
+          </div>
+          <div class="card-footer">
+            Need access?
+            <a href="/register">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

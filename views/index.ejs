@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Secret Page</title>
+    <nav class="border split-nav">
+      <ul class="inline">
+        <li>
+          <a href="/">Lab5</a>
+        </li>
+
+        <% if (!user) { %>
+        <li>
+          <a href="/register">Register</a>
+        </li>
+        <li>
+          <a href="/login">Login</a>
+        </li>
+        <% } %> <% if (user) { %>
+        <li>
+          <a href="/logout">Logout</a>
+        </li>
+        <% } %>
+      </ul>
+
+      <div style="text-align: center;">
+        <h2>
+          <span class="badge success" id="title">
+            Welcome to the Secret Page, you are logged in!!</span
+          >
+        </h2>
+      </div>
+    </nav>
+  </head>
+
+  
+</html>
