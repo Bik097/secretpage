@@ -22,7 +22,7 @@
     "os": "^0.1.1",
     "passport": "^0.4.1",
     "passport-local-mongoose": "^5.0.1",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^6.7.2",
